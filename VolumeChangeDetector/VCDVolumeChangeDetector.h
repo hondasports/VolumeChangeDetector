@@ -13,6 +13,8 @@
 
 @interface VCDVolumeChangeDetector : NSObject
 
+@property (readonly) float initialVolume;
+
 -(void) volumeDown;
 -(void) volumeUp;
 

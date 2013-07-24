@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2717FDF5179FD141007ACF16 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471AD2EC183B6DAC98BEA04 /* MediaPlayer.framework */; };
 		273BD9C9179E791000B9C40B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A33ECD9C2274E4D1E8EF /* UIKit.framework */; };
 		273BD9CA179E791000B9C40B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A964D83DEBD2C04AFA37 /* Foundation.framework */; };
 		273BD9CB179E791000B9C40B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A9253EDFE2AD1854009B /* CoreGraphics.framework */; };
@@ -15,7 +16,7 @@
 		273BD9D9179E791000B9C40B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BD9D8179E791000B9C40B /* Default.png */; };
 		273BD9DB179E791000B9C40B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BD9DA179E791000B9C40B /* Default@2x.png */; };
 		273BD9DD179E791000B9C40B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BD9DC179E791000B9C40B /* Default-568h@2x.png */; };
-		677DC6DE607D4114A6A1BF1A /* libPods-UnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE9258F9B9545B3B5D07B14 /* libPods-UnitTest.a */; settings = {}; };
+		677DC6DE607D4114A6A1BF1A /* libPods-UnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE9258F9B9545B3B5D07B14 /* libPods-UnitTest.a */; };
 		A471A1120EAA40E6B62B9648 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A4442679B8E397AEF69E /* AudioToolbox.framework */; };
 		A471A131D19BD91872306C18 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A471A4074470F0A45740273E /* Default-568h@2x.png */; };
 		A471A243FC2F882000F3141A /* VCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A511A474B3A1D2886B63 /* VCDAppDelegate.m */; };
@@ -74,7 +75,7 @@
 		A471AE320908EF661BF7DC05 /* VCDVolumeChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCDVolumeChangeDetector.h; sourceTree = "<group>"; };
 		A471AE9F2EDE1B2A0173A09C /* VolumeChangeDetector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VolumeChangeDetector-Prefix.pch"; sourceTree = "<group>"; };
 		A471AEDBC648073F9C3206F4 /* VCDVolumeChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCDVolumeChangeDetector.m; sourceTree = "<group>"; };
-		BCE9258F9B9545B3B5D07B14 /* libPods-UnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-UnitTest.a"; path = "libPods-UnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE9258F9B9545B3B5D07B14 /* libPods-UnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2717FDF5179FD141007ACF16 /* MediaPlayer.framework in Frameworks */,
 				273BD9C9179E791000B9C40B /* UIKit.framework in Frameworks */,
 				273BD9CA179E791000B9C40B /* Foundation.framework in Frameworks */,
 				273BD9CB179E791000B9C40B /* CoreGraphics.framework in Frameworks */,
@@ -252,8 +254,6 @@
 			mainGroup = A471A3F9C94EF48184D0E28F;
 			productRefGroup = A471A7CB4FB70F0F8713788C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				A471AA7257801923409383C6 /* VolumeChangeDetector */,
@@ -301,7 +301,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 1;
 		};
 		83FB9FF38A574F34B6726F02 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -316,7 +315,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-UnitTest-resources.sh\"\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -486,6 +484,7 @@
 				273BD9DF179E791000B9C40B /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A471A3C6EB25C10D03553C0A /* Build configuration list for PBXProject "VolumeChangeDetector" */ = {
 			isa = XCConfigurationList;

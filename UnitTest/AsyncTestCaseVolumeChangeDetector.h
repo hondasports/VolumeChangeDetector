@@ -7,6 +7,12 @@
 
 #import <Foundation/Foundation.h>
 #import "GHAsyncTestCase.h"
+#import "VCDVolumeChangeDetector.h"
+#import "NotificationNames.h"
 
 @interface AsyncTestCaseVolumeChangeDetector : GHAsyncTestCase
+
+-(void) testVolumeUp;
+-(void) testVolumeDown;
+
 @end
