@@ -12,19 +12,31 @@
 		273BD9CB179E791000B9C40B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A9253EDFE2AD1854009B /* CoreGraphics.framework */; };
 		273BD9D1179E791000B9C40B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 273BD9CF179E791000B9C40B /* InfoPlist.strings */; };
 		273BD9D3179E791000B9C40B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 273BD9D2179E791000B9C40B /* main.m */; };
-		273BD9D7179E791000B9C40B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 273BD9D6179E791000B9C40B /* AppDelegate.m */; };
 		273BD9D9179E791000B9C40B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BD9D8179E791000B9C40B /* Default.png */; };
 		273BD9DB179E791000B9C40B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BD9DA179E791000B9C40B /* Default@2x.png */; };
 		273BD9DD179E791000B9C40B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 273BD9DC179E791000B9C40B /* Default-568h@2x.png */; };
 		677DC6DE607D4114A6A1BF1A /* libPods-UnitTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE9258F9B9545B3B5D07B14 /* libPods-UnitTest.a */; settings = {}; };
+		A471A1120EAA40E6B62B9648 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A4442679B8E397AEF69E /* AudioToolbox.framework */; };
 		A471A131D19BD91872306C18 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A471A4074470F0A45740273E /* Default-568h@2x.png */; };
 		A471A243FC2F882000F3141A /* VCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A511A474B3A1D2886B63 /* VCDAppDelegate.m */; };
+		A471A247AE7E051207C24E04 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A4442679B8E397AEF69E /* AudioToolbox.framework */; };
 		A471A32D30972A8A8D72182D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A9253EDFE2AD1854009B /* CoreGraphics.framework */; };
 		A471A34AD0D5514894647D97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A454D36D3EB8B5E5BF34 /* main.m */; };
+		A471A35A11C440EE9E117C9C /* NotificationNames.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A8308984B61C6CC5DD2B /* NotificationNames.m */; };
 		A471A40E9B80F29E0E1DA477 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A471A4C27AADE1F5ED918B00 /* Default@2x.png */; };
+		A471A4321A84D8A30BA20E32 /* VCDVolumeChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = A471AEDBC648073F9C3206F4 /* VCDVolumeChangeDetector.m */; };
 		A471A5FDA23296A85CF07245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A964D83DEBD2C04AFA37 /* Foundation.framework */; };
 		A471A65F543B863DE1D61636 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A471ADB901ADC8FBE4774381 /* Default.png */; };
+		A471A7652B186A1BF2B6516B /* TestCaseVolumeChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A8A4BF3150D9D7B97AF7 /* TestCaseVolumeChangeDetector.m */; };
+		A471A7D314E68F7D7EFBAB1C /* NotificationNames.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A8308984B61C6CC5DD2B /* NotificationNames.m */; };
+		A471A8CE055A30B652994739 /* AsyncTestCaseVolumeChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A168A0CCC3DF5F92CF5F /* AsyncTestCaseVolumeChangeDetector.m */; };
+		A471A8D3140851ED44A722CF /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A6F4AE51C1D775301170 /* CoreAudio.framework */; };
 		A471A8ED51F273D628447FCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A33ECD9C2274E4D1E8EF /* UIKit.framework */; };
+		A471A95A5A102EBD3AA61F2D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471A6F4AE51C1D775301170 /* CoreAudio.framework */; };
+		A471A99F0CDA11F05DF07274 /* TestCaseVolumeChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A8A4BF3150D9D7B97AF7 /* TestCaseVolumeChangeDetector.m */; };
+		A471AA10CBA8F5D06047BED6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A471AD2EC183B6DAC98BEA04 /* MediaPlayer.framework */; };
+		A471AC61D9FD5F27DDC5C306 /* AsyncTestCaseVolumeChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = A471A168A0CCC3DF5F92CF5F /* AsyncTestCaseVolumeChangeDetector.m */; };
+		A471AD2C3321E356FD68B38B /* VCDVolumeChangeDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = A471AEDBC648073F9C3206F4 /* VCDVolumeChangeDetector.m */; };
 		A471AD93B794A85208CB81F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A471A5EE0EA255A68FB57C42 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -34,25 +46,34 @@
 		273BD9D0179E791000B9C40B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		273BD9D2179E791000B9C40B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		273BD9D4179E791000B9C40B /* UnitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTest-Prefix.pch"; sourceTree = "<group>"; };
-		273BD9D5179E791000B9C40B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		273BD9D6179E791000B9C40B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		273BD9D8179E791000B9C40B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		273BD9DA179E791000B9C40B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		273BD9DC179E791000B9C40B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		51DD0B29C4614A6D9358E3E0 /* Pods-UnitTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTest.xcconfig"; path = "Pods/Pods-UnitTest.xcconfig"; sourceTree = SOURCE_ROOT; };
 		A471A161DC8C2D2397CA517D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A471A168A0CCC3DF5F92CF5F /* AsyncTestCaseVolumeChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncTestCaseVolumeChangeDetector.m; sourceTree = "<group>"; };
+		A471A2306795A93D845737E3 /* AsyncTestCaseVolumeChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncTestCaseVolumeChangeDetector.h; sourceTree = "<group>"; };
 		A471A303EB42532BF9719013 /* VolumeChangeDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeChangeDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A471A33ECD9C2274E4D1E8EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A471A4074470F0A45740273E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A471A4442679B8E397AEF69E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A471A454D36D3EB8B5E5BF34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A471A4C27AADE1F5ED918B00 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A471A4C584839DA569292456 /* VCDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCDAppDelegate.h; sourceTree = "<group>"; };
 		A471A511A474B3A1D2886B63 /* VCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCDAppDelegate.m; sourceTree = "<group>"; };
 		A471A65B80FEFF9A16014C0C /* VolumeChangeDetector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "VolumeChangeDetector-Info.plist"; sourceTree = "<group>"; };
+		A471A6F4AE51C1D775301170 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A471A8308984B61C6CC5DD2B /* NotificationNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationNames.m; sourceTree = "<group>"; };
+		A471A8A4BF3150D9D7B97AF7 /* TestCaseVolumeChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCaseVolumeChangeDetector.m; sourceTree = "<group>"; };
 		A471A9253EDFE2AD1854009B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A471A964D83DEBD2C04AFA37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A471AAEF465D41D1C69AD22B /* NotificationNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationNames.h; sourceTree = "<group>"; };
+		A471AD2EC183B6DAC98BEA04 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A471AD76CC7AE08BD0F60B10 /* TestCaseVolumeChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCaseVolumeChangeDetector.h; sourceTree = "<group>"; };
 		A471ADB901ADC8FBE4774381 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A471AE320908EF661BF7DC05 /* VCDVolumeChangeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCDVolumeChangeDetector.h; sourceTree = "<group>"; };
 		A471AE9F2EDE1B2A0173A09C /* VolumeChangeDetector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VolumeChangeDetector-Prefix.pch"; sourceTree = "<group>"; };
+		A471AEDBC648073F9C3206F4 /* VCDVolumeChangeDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCDVolumeChangeDetector.m; sourceTree = "<group>"; };
 		BCE9258F9B9545B3B5D07B14 /* libPods-UnitTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-UnitTest.a"; path = "libPods-UnitTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,6 +86,8 @@
 				273BD9CA179E791000B9C40B /* Foundation.framework in Frameworks */,
 				273BD9CB179E791000B9C40B /* CoreGraphics.framework in Frameworks */,
 				677DC6DE607D4114A6A1BF1A /* libPods-UnitTest.a in Frameworks */,
+				A471A8D3140851ED44A722CF /* CoreAudio.framework in Frameworks */,
+				A471A247AE7E051207C24E04 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +98,9 @@
 				A471A8ED51F273D628447FCF /* UIKit.framework in Frameworks */,
 				A471A5FDA23296A85CF07245 /* Foundation.framework in Frameworks */,
 				A471A32D30972A8A8D72182D /* CoreGraphics.framework in Frameworks */,
+				A471A95A5A102EBD3AA61F2D /* CoreAudio.framework in Frameworks */,
+				A471AA10CBA8F5D06047BED6 /* MediaPlayer.framework in Frameworks */,
+				A471A1120EAA40E6B62B9648 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,9 +110,11 @@
 		273BD9CC179E791000B9C40B /* UnitTest */ = {
 			isa = PBXGroup;
 			children = (
-				273BD9D5179E791000B9C40B /* AppDelegate.h */,
-				273BD9D6179E791000B9C40B /* AppDelegate.m */,
 				273BD9CD179E791000B9C40B /* Supporting Files */,
+				A471A8A4BF3150D9D7B97AF7 /* TestCaseVolumeChangeDetector.m */,
+				A471AD76CC7AE08BD0F60B10 /* TestCaseVolumeChangeDetector.h */,
+				A471A168A0CCC3DF5F92CF5F /* AsyncTestCaseVolumeChangeDetector.m */,
+				A471A2306795A93D845737E3 /* AsyncTestCaseVolumeChangeDetector.h */,
 			);
 			path = UnitTest;
 			sourceTree = "<group>";
@@ -136,6 +164,10 @@
 				A471A3C4DAB8F22E69CC4FF1 /* Supporting Files */,
 				A471A4C584839DA569292456 /* VCDAppDelegate.h */,
 				A471A511A474B3A1D2886B63 /* VCDAppDelegate.m */,
+				A471A8308984B61C6CC5DD2B /* NotificationNames.m */,
+				A471AAEF465D41D1C69AD22B /* NotificationNames.h */,
+				A471AEDBC648073F9C3206F4 /* VCDVolumeChangeDetector.m */,
+				A471AE320908EF661BF7DC05 /* VCDVolumeChangeDetector.h */,
 			);
 			path = VolumeChangeDetector;
 			sourceTree = "<group>";
@@ -156,6 +188,9 @@
 				A471A964D83DEBD2C04AFA37 /* Foundation.framework */,
 				A471A9253EDFE2AD1854009B /* CoreGraphics.framework */,
 				BCE9258F9B9545B3B5D07B14 /* libPods-UnitTest.a */,
+				A471A6F4AE51C1D775301170 /* CoreAudio.framework */,
+				A471AD2EC183B6DAC98BEA04 /* MediaPlayer.framework */,
+				A471A4442679B8E397AEF69E /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,7 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				273BD9D3179E791000B9C40B /* main.m in Sources */,
-				273BD9D7179E791000B9C40B /* AppDelegate.m in Sources */,
+				A471A99F0CDA11F05DF07274 /* TestCaseVolumeChangeDetector.m in Sources */,
+				A471A35A11C440EE9E117C9C /* NotificationNames.m in Sources */,
+				A471A4321A84D8A30BA20E32 /* VCDVolumeChangeDetector.m in Sources */,
+				A471A8CE055A30B652994739 /* AsyncTestCaseVolumeChangeDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +339,10 @@
 			files = (
 				A471A34AD0D5514894647D97 /* main.m in Sources */,
 				A471A243FC2F882000F3141A /* VCDAppDelegate.m in Sources */,
+				A471A7652B186A1BF2B6516B /* TestCaseVolumeChangeDetector.m in Sources */,
+				A471A7D314E68F7D7EFBAB1C /* NotificationNames.m in Sources */,
+				A471AD2C3321E356FD68B38B /* VCDVolumeChangeDetector.m in Sources */,
+				A471AC61D9FD5F27DDC5C306 /* AsyncTestCaseVolumeChangeDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +377,7 @@
 				GCC_PREFIX_HEADER = "UnitTest/UnitTest-Prefix.pch";
 				INFOPLIST_FILE = "UnitTest/UnitTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -348,6 +391,7 @@
 				GCC_PREFIX_HEADER = "UnitTest/UnitTest-Prefix.pch";
 				INFOPLIST_FILE = "UnitTest/UnitTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
