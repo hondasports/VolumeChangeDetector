@@ -55,10 +55,7 @@ void volumeChangeListenerCallback (
 		[self.volumeView sizeToFit];
 		[[[[UIApplication sharedApplication] windows] objectAtIndex:0] addSubview:self.volumeView];
 
-		AudioSessionAddPropertyListener(
-				kAudioSessionProperty_CurrentHardwareOutputVolume,
-				volumeChangeListenerCallback,
-				(__bridge void *)self);
+		[self addAudioSession];
 	}
 	return self;
 }
@@ -72,19 +69,19 @@ void volumeChangeListenerCallback (
 -(void) volumeDown
 {
 	[self removeAudioSession];
-	[MPMusicPlayerController applicationMusicPlayer].volume = _initialVolume;
+	[self revertVolumeToInitial];
 	[self addAudioSession];
 
-	[[NSNotificationCenter defaultCenter] postNotificationName:kVolumeDownButtonDidPush object:self];
+	[self postNotification:kVolumeDownButtonDidPush];
 }
 
 -(void) volumeUp
 {
 	[self removeAudioSession];
-	[MPMusicPlayerController applicationMusicPlayer].volume = _initialVolume;
+	[self revertVolumeToInitial];
 	[self addAudioSession];
 
-	[[NSNotificationCenter defaultCenter] postNotificationName:kVolumeUpButtonDidPush object:self];
+	[self postNotification:kVolumeUpButtonDidPush];
 }
 
 - (void) addAudioSession
@@ -101,6 +98,16 @@ void volumeChangeListenerCallback (
 			kAudioSessionProperty_CurrentHardwareOutputVolume,
 			volumeChangeListenerCallback,
 			(__bridge void *)self);
+}
+
+- (void) revertVolumeToInitial
+{
+	[MPMusicPlayerController applicationMusicPlayer].volume = _initialVolume;
+}
+
+- (void) postNotification:(NSString *)notificationName
+{
+	[[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self];
 }
 
 @end
