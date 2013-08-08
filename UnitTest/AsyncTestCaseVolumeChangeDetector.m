@@ -13,40 +13,77 @@
 	VCDVolumeChangeDetector *volumeChangeDetector;
 }
 
--(void) setUp
+- (void) setUp
 {
 	volumeChangeDetector = [VCDVolumeChangeDetector new];
 	initialVolume = [volumeChangeDetector initialVolume];
 }
 
--(void) tearDown
+- (void) tearDown
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:self
-													name:kVolumeDownButtonDidPush
-												  object:nil];
+	volumeChangeDetector = nil;
 }
 
--(void) testVolumeDown
+- (void) testVolumeDown
 {
 	[self prepare];
 	[[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(volumeChangeDetect:)
+											 selector:@selector(volumeDownDetect:)
 												 name:kVolumeDownButtonDidPush
 											   object:nil];
 	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:10];
 }
 
--(void) volumeChangeDetect :(NSNotification *)notification
+- (void) volumeDownDetect :(NSNotification *)notification
 {
-	@try{
-		[self notify:kGHUnitWaitStatusSuccess forSelector:@selector(testVolumeDown)];
-	} @catch (NSException *exception1){
+	float modifiedVolume = [MPMusicPlayerController applicationMusicPlayer].volume;
 
+	DLog(@"volume init mod : %f : %f", initialVolume, modifiedVolume);
+
+	@try
+	{
+		GHAssertEquals(initialVolume, modifiedVolume, @"一致するはず");
+		[self notify:kGHUnitWaitStatusSuccess forSelector:@selector(testVolumeDown)];
+	} @catch (NSException *exception1)
+	{
+		[self notify:kGHUnitWaitStatusFailure forSelector:@selector(testVolumeDown)];
+	} @finally{
+		[[NSNotificationCenter defaultCenter] removeObserver:self
+														name:kVolumeDownButtonDidPush
+													  object:nil];
 	}
 }
 
--(void) testVolumeUp
+- (void) testVolumeUp
 {
+	[self prepare];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(volumeUpDetect:)
+												 name:kVolumeUpButtonDidPush
+											   object:nil];
+	[self waitForStatus:kGHUnitWaitStatusSuccess timeout:10];
+
 }
+
+- (void) volumeUpDetect :(NSNotification *)notification
+{
+	float modifiedVolume = [MPMusicPlayerController applicationMusicPlayer].volume;
+
+	DLog(@"volume init mod : %f : %f", initialVolume, modifiedVolume);
+
+	@try
+	{
+		GHAssertEquals(initialVolume, modifiedVolume, @"一致するはず");
+		[self notify:kGHUnitWaitStatusSuccess forSelector:@selector(testVolumeUp)];
+	} @catch (NSException *exception1)
+	{
+		[self notify:kGHUnitWaitStatusFailure forSelector:@selector(testVolumeUp)];
+	} @finally{
+		[[NSNotificationCenter defaultCenter] removeObserver:self
+														name:kVolumeUpButtonDidPush
+													  object:nil];
+	}
+}
+
 
 @end

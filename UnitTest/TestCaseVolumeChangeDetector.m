@@ -13,23 +13,28 @@
 	VCDVolumeChangeDetector *volumeChangeDetector;
 }
 
--(void) setUp
+- (void) setUp
 {
 	mock = [OCMockObject observerMock];
 	volumeChangeDetector = [VCDVolumeChangeDetector new];
 }
 
--(void) tearDown
+- (void) tearDown
 {
-	[[NSNotificationCenter defaultCenter] removeObserver:mock name:kVolumeDownButtonDidPush object:nil];
-	[[NSNotificationCenter defaultCenter] removeObserver:mock name:kVolumeUpButtonDidPush object:nil];
+	[[NSNotificationCenter defaultCenter] removeObserver:mock
+													name:kVolumeDownButtonDidPush
+												  object:nil];
+
+	[[NSNotificationCenter defaultCenter] removeObserver:mock
+													name:kVolumeUpButtonDidPush
+												  object:nil];
 }
 
--(void) testInit
+- (void) testInit
 {
 }
 
--(void) testVolumeDown
+- (void) testVolumeDown
 {
 	[[NSNotificationCenter defaultCenter] addMockObserver:mock name:kVolumeDownButtonDidPush object:nil];
 	[[mock expect] notificationWithName:kVolumeDownButtonDidPush object:[OCMArg any]];
@@ -38,7 +43,7 @@
 	[mock verify];
 }
 
--(void) testVolumeUp
+- (void) testVolumeUp
 {
 	[[NSNotificationCenter defaultCenter] addMockObserver:mock name:kVolumeUpButtonDidPush object:nil];
 	[[mock expect] notificationWithName:kVolumeUpButtonDidPush object:[OCMArg any]];

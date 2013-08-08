@@ -15,6 +15,8 @@
 
 @property (readonly) float initialVolume;
 
+@property (nonatomic, retain) UIView *volumeView;
+
 -(void) volumeDown;
 -(void) volumeUp;
 

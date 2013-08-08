@@ -30,7 +30,14 @@ void volumeChangeListenerCallback (
 	float volume = *volumePointer;
 
 	VCDVolumeChangeDetector *vcdVolumeChangeDetector = (__bridge VCDVolumeChangeDetector *)inClientData;
-	[vcdVolumeChangeDetector volumeDown];
+
+	DLog(@"current [%f] init [%f] ", volume, vcdVolumeChangeDetector.initialVolume);
+
+	if(volume < vcdVolumeChangeDetector.initialVolume){
+		[vcdVolumeChangeDetector volumeDown];
+	} else if (volume > vcdVolumeChangeDetector.initialVolume){
+		[vcdVolumeChangeDetector volumeUp];
+	}
 }
 
 
@@ -43,7 +50,10 @@ void volumeChangeListenerCallback (
 
 		_initialVolume = [[MPMusicPlayerController applicationMusicPlayer] volume];
 
-		DLog(@"initialVolume %f", _initialVolume);
+		CGRect frame = CGRectMake(0, -100, 10, 0);
+		self.volumeView = [[MPVolumeView alloc] initWithFrame:frame];
+		[self.volumeView sizeToFit];
+		[[[[UIApplication sharedApplication] windows] objectAtIndex:0] addSubview:self.volumeView];
 
 		AudioSessionAddPropertyListener(
 				kAudioSessionProperty_CurrentHardwareOutputVolume,
@@ -55,26 +65,42 @@ void volumeChangeListenerCallback (
 
 -(void) dealloc
 {
+	[self removeAudioSession];
 	AudioSessionSetActive(NO);
-	AudioSessionRemovePropertyListenerWithUserData(
-			kAudioSessionProperty_CurrentHardwareOutputVolume,
-			volumeChangeListenerCallback,
-			(__bridge void *)self);
 }
 
 -(void) volumeDown
 {
-	AudioSessionRemovePropertyListenerWithUserData(
-			kAudioSessionProperty_CurrentHardwareOutputVolume,
-			volumeChangeListenerCallback,
-			(__bridge void *)self);
+	[self removeAudioSession];
 	[MPMusicPlayerController applicationMusicPlayer].volume = _initialVolume;
+	[self addAudioSession];
+
 	[[NSNotificationCenter defaultCenter] postNotificationName:kVolumeDownButtonDidPush object:self];
 }
 
 -(void) volumeUp
 {
+	[self removeAudioSession];
+	[MPMusicPlayerController applicationMusicPlayer].volume = _initialVolume;
+	[self addAudioSession];
+
 	[[NSNotificationCenter defaultCenter] postNotificationName:kVolumeUpButtonDidPush object:self];
+}
+
+- (void) addAudioSession
+{
+	AudioSessionAddPropertyListener(
+			kAudioSessionProperty_CurrentHardwareOutputVolume,
+			volumeChangeListenerCallback,
+			(__bridge void *)self);
+}
+
+- (void) removeAudioSession
+{
+	AudioSessionRemovePropertyListenerWithUserData(
+			kAudioSessionProperty_CurrentHardwareOutputVolume,
+			volumeChangeListenerCallback,
+			(__bridge void *)self);
 }
 
 @end

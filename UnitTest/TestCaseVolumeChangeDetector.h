@@ -15,7 +15,8 @@
 
 @interface TestCaseVolumeChangeDetector : GHTestCase
 
--(void) testVolumeUp;
--(void) testVolumeDown;
+- (void) testVolumeUp;
+
+- (void) testVolumeDown;
 
 @end

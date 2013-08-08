@@ -12,7 +12,8 @@
 
 @interface AsyncTestCaseVolumeChangeDetector : GHAsyncTestCase
 
--(void) testVolumeUp;
--(void) testVolumeDown;
+- (void) testVolumeUp;
+
+- (void) testVolumeDown;
 
 @end
