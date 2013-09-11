@@ -45,23 +45,56 @@ void volumeChangeListenerCallback (
 {
 	self = [super init];
 	if(self){
-		AudioSessionInitialize(NULL, NULL, NULL, NULL);
-		AudioSessionSetActive(YES);
+		[self initializeAudioSession];
 
-		_initialVolume = [[MPMusicPlayerController applicationMusicPlayer] volume];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(applicationDidBecomeActiveNotification:)
+													 name:UIApplicationDidBecomeActiveNotification
+												   object:nil];
 
-		CGRect frame = CGRectMake(0, -100, 10, 0);
-		self.volumeView = [[MPVolumeView alloc] initWithFrame:frame];
-		[self.volumeView sizeToFit];
-		[[[[UIApplication sharedApplication] windows] objectAtIndex:0] addSubview:self.volumeView];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(applicationDidEnterBackgroundNotification:)
+													 name:UIApplicationDidEnterBackgroundNotification
+												   object:nil];
 
-		[self addAudioSession];
 	}
 	return self;
 }
 
+- (void) initializeAudioSession
+{
+	AudioSessionInitialize(NULL, NULL, NULL, NULL);
+	AudioSessionSetActive(YES);
+
+	_initialVolume = [[MPMusicPlayerController applicationMusicPlayer] volume];
+
+	CGRect frame = CGRectMake(0, -100, 10, 0);
+	self.volumeView = [[MPVolumeView alloc] initWithFrame:frame];
+	[self.volumeView sizeToFit];
+	[[[[UIApplication sharedApplication] windows] objectAtIndex:0] addSubview:self.volumeView];
+
+	[self addAudioSession];
+}
+
+-(void)applicationDidBecomeActiveNotification:(NSNotification *)notification{
+	[self initializeAudioSession];
+	DLog("applicationDidBecomeActiveNotification");
+}
+
+-(void)applicationDidEnterBackgroundNotification:(NSNotification *)notification{
+	DLog("applicationDidEnterBackgroundNotification");
+}
+
 -(void) dealloc
 {
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:UIApplicationDidBecomeActiveNotification
+												  object:nil];
+
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:UIApplicationDidEnterBackgroundNotification
+												  object:nil];
+
 	[self removeAudioSession];
 	AudioSessionSetActive(NO);
 }
